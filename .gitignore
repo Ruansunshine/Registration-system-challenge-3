@@ -1,0 +1,40 @@
+//lista de cores.
+Brand
+#F67841
+#F3541C
+#E43A12
+#2135A6
+Text
+#292524 (text-primary)
+#57534E (text-secondary)
+#8F8881 (text-tertiary)
+#E43A12 (text-highlight)
+Surface
+#FFFFFF (surface-primary)
+#FEE7D6 (surface-secondary)
+#E7E5E4 (surface-disabled)
+Stroke
+#D6D3D1 (stroke-default)
+#F3541C (stroke-highlight)
+Semantic
+#DC2626 (semantic-error)
+
+h1
+tamanho 32px
+altura da linha 120%
+peso bold
+
+h2
+tamanho 24px
+altura da linha 120%
+peso bold
+
+h3
+tamanho 20px
+altura da linha 120%
+peso bold
+
+h4
+tamanho 16px
+altura da linha 120%
+peso bold
