@@ -146,7 +146,7 @@ function segurancaClick() {
         console.log("Dados salvos no localStorage:", dados);
 
         // Redireciona para página final
-        window.location.href = '/teste.html';
+        window.location.href = '/Pages/password.html';
     });
 
     cancelar.addEventListener('click', () => {

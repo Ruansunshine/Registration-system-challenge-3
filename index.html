@@ -1,351 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Trilhas Inova</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="src/css/styles.css">
-    <!-- endereço da fonte poppins no google fonte  -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
-
+    <title>Login do usuário</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./src/css/style_login.css">
 </head>
 
 <body>
+    <main class="main-principal">
+        <section class="section-principal "> 
 
-    <main class="main-principal conteiner">
-        <section class="section-principal">
-            <section class="titulo-inicio mb-5">
-
-                <div class="spacer"></div>
-                <div>
-                    <img src="./src/assets/icons/arrow-left.svg" alt="">
-                    <a class="text-muted"> Voltar</a>
-                </div>
-                <h1 class="h1">Formulário de inscrição</h1>
-                <p class="p1 ">Prencha os dados abaixo para fazer sua inscrição no programa Trilhas
-                </p>
+            <section class="img-principal p-9">
+                <img src="./src/assets/img/Imagem.svg" alt="Imagem principal">
             </section>
-            <!-- seção do participante -->
-            <section class="participante">
-                <h3 class="h3  mb-4">Informações do participante</h3>
-                <!-- campos de entradas com nome, data de nasciment, cpf , sexo, email, telefone, documento de indetidade -->
-                <div class="mb-3">
-                    <label for="entrada-1" class="form-label text-muted  mb-1" id="label-nome"></label>
-                    <input name="nomeUsuarios" type="text" class="form-control bg-secondary bg-opacity-25 form-control-lg w-100"
-                        id="entrada-1" maxlength="100" data-required data-error-id="error-message-1">
-                    <span id="error-message-1" class="text-danger mt-2" style="display: none; font-size: 0.9rem;">
-                        <img src="./src/assets/icons/alert-icons.svg" alt=""> Preecha os campos
-                    </span>
-                </div>
-                <div class="mb-3">
-                    <label for="entrada-2" class="form-label text-muted  mb-1" id="label-data"></label>
-                    <input name="dataNascimento"   type="date" class="form-control bg-secondary bg-opacity-25 form-control-lg w-100"
-                        id="entrada-2" data-required data-error-id="error-message-2">
-                    <span id="error-message-2" class="text-danger mt-2" style="display: none; font-size: 0.9rem;">
-                        <img src="./src/assets/icons/alert-icons.svg" alt=""> Preecha os campos
-                    </span>
-                </div>
-                <div class="mb-3">
-                    <label for="entrada-3" class="form-label text-muted  mb-1" id="label-cpf"></label>
-                    <input name="CPF" type="text" class="form-control bg-secondary bg-opacity-25 form-control-lg w-100"
-                        id="entrada-3" maxlength="14 " data-required data-error-id="error-message-3">
-                    <span id="error-message-3" class="text-danger mt-2" style="display: none; font-size: 0.9rem;">
-                        <img src="./src/assets/icons/alert-icons.svg" alt=""> Preecha os campos
-                    </span>
-                </div>
-                <div class="mb-3">
-                    <label for="entrada-4" class="form-label text-muted mb-1" id="label-sexo"></label>
-                    <div class="position-relative">
-                        <select name="sexo" class="form-control bg-secondary bg-opacity-25 form-control-lg w-100"
-                            id="entrada-4" data-required data-error-id="error-message-4">>
-                            <option value=""></option>
-                            <option value="masculino">Masculino</option>
-                            <option value="feminino">Feminino</option>
-                            <option value="outros">Outros</option>
-                        </select>
-                        <span class="position-absolute end-0 top-50 translate-middle-y px-3">
-                            <img src="./src/assets/icons/arrow-down.svg" alt="Seta" class="icon-seta">
-                        </span>
-                        <span id="error-message-4" class="text-danger mt-2" style="display: none; font-size: 0.9rem;">
-                            <img src="./src/assets/icons/alert-icons.svg" alt=""> Preecha os campos
-                        </span>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="entrada-5" class="form-label text-muted  mb-1" id="label-email"></label>
-                    <input name="e-mail" type="text" class="form-control bg-secondary bg-opacity-25 form-control-lg w-100"
-                        id="entrada-5" maxlength="100" data-required data-error-id="error-message-5">
-                    <span id="error-message-5" class="text-danger mt-2" style="display: none; font-size: 0.9rem;">
-                        <img src="./src/assets/icons/alert-icons.svg" alt=""> Preecha os campos
-                    </span>
-                    <span id="error-message-email" class="text-danger mt-2" style="display: none; font-size: 0.9rem;">
-                        <img src="./src/assets/icons/alert-icons.svg" alt=""> insira um e-mail válido
-                    </span>
-                </div>
-                <div class="mb-3">
-                    <label for="entrada-6" class="form-label text-muted  mb-1" id="label-telefone"></label>
-                    <input name="telefone" type="text" class="form-control bg-secondary bg-opacity-25 form-control-lg w-100"
-                        id="entrada-6" maxlength="11" data-required data-error-id="error-message-6">
-                    <span id="error-message-6" class="text-danger mt-2" style="display: none; font-size: 0.9rem;">
-                        <img src="./src/assets/icons/alert-icons.svg" alt=""> Preecha os campos
-                    </span>
 
-                </div>
-                <div>
-                    <br>
-                    <div class="mb-5">
-                        <label for="customFile" class="form-label" id="label-arquivo"></label>
-                        <!--  mduar para svg icons/asseyts-->
-                        <div
-                            class="d-flex flex-column align-items-center justify-content-center border border-2 rounded  p-4 w-100 border-dashed file-upload-area"="selecionarArquivo()">
+            <section class="form bg-white rounded-lg p-10">
+               <div class="form-div">
+                <h1 class="mb-8 mt-12 text-4xl font-mono ">Login</h1>
+                <form class="w-[100%]" onsubmit="">
+                 
+               <div>
+                    <label for="entrada-1" class="block text-black-600 text-sm font-medium mb-2 text-xl" id="id-usuario">CPF</label>
+                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-100 focus:outline-nome focus:rin-2 focus:border-blue-500 mb-4"  id="entrada-1" maxlength="100"/>
+                 </div>
 
-                            <div>
-                                <img src="./src/assets/icons/cloud-upload.svg" alt="">
-                            </div>
-                            <!-- Texto abaixo do ícone -->
-                            <span class="text-muted mt-2" id="file-name">Clique aqui para selecionar o
-                                arquivo</span>
-                        </div>
-
-                        <input name="arquivoIndentidade" type="file" id="file-input" class="d-none" data-required
-                            data-error-id="error-message-file">
-                        <span id="error-message-file" class="text-danger mt-2"
-                            style="display: none; font-size: 0.9rem;">
-                            <img src="./src/assets/icons/alert-icons.svg" alt=""> Selecione um arquivo
-                        </span>
-                    </div>
-                </div>
-            </section>
-            <!-- seção do endereço -->
-
-            <section class="endereco">
-                <h3 class="h3" id="titulo-endereco"></h3>
-                <!-- campos de entradas com cep, rua,  cidade , numero, estado, comprovante de residncia -->
-                <div class="mb-3">
-                    <label for="entrada-7" class="form-label text-muted  mb-1" id="label-cep"></label>
-                    <input name="CEP" type="text" class="form-control bg-secondary bg-opacity-25 form-control-lg w-100"
-                        id="entrada-7" maxlength="9" data-required data-error-id="error-message-7">
-                    <span id="error-message-7" class="text-danger mt-2" style="display: none; font-size: 0.9rem;">
-                        <img src="./src/assets/icons/alert-icons.svg" alt=""> Preecha os campos
-                    </span>
-                </div>
-                <div class="mb-3 row">
-                    <div class="col-8 d-flex">
-                        <div class="flex-grow-1">
-                            <label for="entrada-8" class="form-label text-muted  mb-1" id="label-rua"></label>
-                            <input name="rua" type="text" class="form-control  bg-secondary bg-opacity-25 form-control-lg w-100"
-                                id="entrada-8" maxlength="70" data-required data-error-id="error-message-8">
-                            <span id="error-message-8" class="text-danger mt-2"
-                                style="display: none; font-size: 0.9rem;">
-                                <img src="./src/assets/icons/alert-icons.svg" alt=""> Preecha os campos
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-3 d-flex">
-                        <div class="flex-grow-1">
-                            <label for="entrada-9" class="form-label text-muted  mb-1" id="label-numero"></label>
-                            <input name="numero" type="text" class="form-control  bg-secondary bg-opacity-25 form-control-lg w-100"
-                                id="entrada-9" maxlength="4" data-required data-error-id="error-message-9">
-                                
-                            <span id="error-message" class="text-danger"
-                                style="display: none; font-size: 0.9rem;">Apenas números são permitidos!</span>
-                                <span id="error-message-9" class="text-danger mt-2" style="display: none; font-size: 0.9rem;">
-                                    <img src="./src/assets/icons/alert-icons.svg" alt=""> Preecha os campos
-                                </span>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="mb-3 row ">
-                    <div class="col-8 d-flex">
-                        <div class="flex-grow-1">
-                            <label for="entrada-10" class="form-label text-muted  mb-1" id="label-cidade"></label>
-                            <input name="cidade" type="text" class="form-control  bg-secondary bg-opacity-25 form-control-lg w-100"
-                                id="entrada-10" maxlength="50" data-required data-error-id="error-message-10">
-                            <span id="error-message-10" class="text-danger mt-2"
-                                style="display: none; font-size: 0.9rem;">
-                                <img src="./src/assets/icons/alert-icons.svg" alt=""> Preecha os campos
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-3 d-flex">
-                        <div class="flex-grow-1">
-                            <label for="entrada-11" class="form-label text-muted  mb-1" id="label-estado"></label>
-                            <select name="label-estado" class="form-control bg-secondary bg-opacity-25 form-control-lg w-100"
-                                id="entrada-11" data-required data-error-id="error-message-11">
-                                <option value="" disabled selected></option>
-                            </select>
-                            <span id="error-message-11" class="text-danger mt-2"
-                                style="display: none; font-size: 0.9rem;">
-                                <img src="./src/assets/icons/alert-icons.svg" alt=""> Preecha os campos
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="mb-5">
-                    <label for="customFile" class="form-label">Comprovante de Residência</label>
+                 <div>
+                    <label for="entrada-2" class="block text-black-600 text-sm font-medium mb-2 text-xl" id="id-senha">Senha</label>
+                    <input type="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-100 focus:outline-nome focus:rin-2 focus:border-blue-500 mb-8"  id="entrada-2" maxlength="100"/>
+                 </div> 
+                   <!-- mandar pra viewes -->
+                 <div class="flex justify-center">
+                    <button type="submit" class="w-3/5 bg-[#E43A12] text-black text-xl font-bold py-3 px-4 border-2 border-gray-500 rounded-md hover:bg-gray-400">Entrar</button>
+                 </div>
                 
-                    <div class="d-flex flex-column align-items-center justify-content-center border border-2 rounded p-4 w-100 border-dashed file-upload-area">
-                        <img src="./src/assets/icons/cloud-upload.svg" alt="">
-                        <span class="text-muted mt-2" id="file-name">Clique aqui para selecionar o arquivo</span>
-                    </div>
-                
-                    <input type="file" id="file-input-2" class="d-none" data-required data-error-id="error-message-file-2">
-                
-                    <span id="error-message-file-2" class="text-danger" style="display: none; font-size: 0.9rem; margin-top: 2px;">
-                        <img src="./src/assets/icons/alert-icons.svg" alt=""> Selecione um arquivo
-                    </span>
+                </form>
+                     <div class="footerTelaLogin">
+                    <a href="Pages/cadastro.html" class="mb-8">Cadastrar</a>
+                    <h3>Esqueci a senha</h3>
                 </div>
-                
-            </section>
-            <!-- seção trilhas -->
-            <section class="trilhas ms-auto ">
-                <!-- Programação front , back,jogos, ux, ciencia de dados -->
-                <h3 class="h3 mb-4" id="title-trilhas"></h3>
-                <div class="mb-3">
-
-                    <label class="form-label text-muted mb-1">Selecione apenas uma trilha</label>
-
-                </div>
-
-                <div class="container">
-                    <div class="row g-3">
-                        <!-- Programação Front-end -->
-                        <div class="col-6">
-                            <div class="mb-3 icons d-flex flex-column align-items-center justify-content-center border border-2 rounded p-4 w-100 position-relative"
-                                id="front-end-box">
-                                <label class="position-absolute top-0 start-0 m-2">
-                                    <input type="radio" class="form-check-input" name="trilhas"
-                                        style="border-radius: 50%;" data-required data-error-id="error-trilha" value="Programação Front-end">
-                                </label>
-                                
-                                <img src="./src/assets/icons/front-end.svg" alt="">
-                                <span class="" id="file-name">Programação Front-end</span>
-                                
-                                
-                            </div>
-                        </div>
-                        <!-- Programação Back-end -->
-                        <div class="col-6">
-                            <div class="mb-3 icons d-flex flex-column align-items-center justify-content-center border border-2 rounded p-4 w-100 position-relative"
-                                id="back-end-box">
-                                <label class="position-absolute top-0 start-0 m-2">
-                                    <input type="radio" class="form-check-input" name="trilhas"
-                                        style="border-radius: 50%;" data-required data-error-id="error-trilha"
-                                        value="Programação Back-end">
-                                </label>
-                                <img src="./src/assets/icons/front-end.svg" alt="">
-                                <span class="" id="file-name">Programação Back-end</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- programação jogos -->
-                <div class="container">
-                    <div class="row g-3">
-                        <!-- Programação Front-end -->
-                        <div class="col-6">
-                            <div class="mb-3 icons d-flex flex-column align-items-center justify-content-center border border-2 rounded p-4 w-100 position-relative"
-                                id="jogos-box">
-                                <label class="position-absolute top-0 start-0 m-2">
-                                    <input type="radio" class="form-check-input" name="trilhas"
-                                        style="border-radius: 50%;" data-required data-error-id="error-trilha"
-                                        value=">Programação Jogos">
-                                </label>
-                                <img src="./src/assets/icons/icon-games.svg" alt="">
-                                <span class="" id="file-name">Programação Jogos</span>
-                            </div>
-                        </div>
-                        <!-- Programação Back-end -->
-                        <div class="col-6">
-                            <div class="mb-3 icons d-flex flex-column align-items-center justify-content-center border border-2 rounded p-4 w-100 position-relative"
-                                id="Design-experiencia-box">
-                                <label class="position-absolute top-0 start-0 m-2">
-                                    <input type="radio" class="form-check-input" name="trilhas"
-                                        style="border-radius: 50%;" data-required data-error-id="error-trilha"
-                                        value="Design e Experiência">
-                                </label>
-                                <img src="./src/assets/icons/icon-ux.svg" alt="">
-                                <span class="" id="file-name">Design e Experiência</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ciencia de dados -->
-                <div class="container mb-3">
-                    <div class="row g-3">
-                        <!-- Programação Front-end -->
-                        <div class="col-6">
-                            <div class="mb-3 icons d-flex flex-column align-items-center justify-content-center border border-2 rounded p-4 w-100 position-relative"
-                                id="ciencia-dados-box">
-                                <label class="position-absolute top-0 start-0 m-2">
-                                    <input type="radio" class="form-check-input" name="trilhas"
-                                        style="border-radius: 50%;"data-required data-error-id="error-trilha" value="Ciência de Dados">
-                                </label>
-                                <img src="./src/assets/icons/icon-data.svg" alt="">
-                                <span class="" id="file-name">Ciência de Dados</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <span id="error-trilha" class="text-danger mt-2" style="display: none; font-size: 0.9rem;">
-                    <img src="./src/assets/icons/alert-icons.svg" alt=""> Selecione uma trilha
-                </span>
-
-            </section>
-            <!-- seção de segurança -->
-            <section class="seguranca mb-5">
-                <div class="d-flex justify-content-center align-items-center mb-3">
-                    <input type="checkbox" class="form-check-input mb-4" name="seguranca" id="seguranca"
-                        style="border-radius: 5%; margin-right: 2vh;" data-required data-error-id="error-seguranca">
-                    <p class="mb-3" style="display: inline-block; margin: 0;">Declaro que li e concordo com os
-                        <strong style="color: #e43a12;">Termos e Condições</strong> e com a
-                        <strong style="color: #e43a12;">Política de Privacidade</strong>
-                    </p>
-                </div>
-                <div class="d-flex flex-column align-items-end botao-container">
-                    <div>
-                        <button id="cancelar" class="btn btn-outline-orange me-2">Cancelar</button>
-                        <button id="inscricao" class="btn btn-orange" disabled>Fazer inscrição</button>
-                    </div>
-                    <span id="error-seguranca" class="text-danger mt-2" style="display: none; font-size: 0.9rem;">
-                        <img src="./src/assets/icons/alert-icons.svg" alt=""> Aceite os termos para finalizar o cadastro
-                    </span>
-                </div>
-
-                <!-- botão de cancelar e fazer a inscrição -->
-            </section>
-
-            <section class="rodape">
-                <footer>
-                    <div class="text-center mt-4">
-                        <p class="text-muted">
-                            <strong>Já possui cadastro?
-                            <a href="Pages/login.html">Clique aqui para fazer login</a>
-                        </strong>
-                        </p>
-                    </div>
-                    
-                </footer>
-            </section>
+               </div>
+        </section>
         </section>
 
-        <!-- imagem fora do main -->
-        <div class="image-ilustracao">
-            <img src="./src/assets/image/ilustracao.png" class="ilustracao img-fluid" alt="Ilustração">
-            <img src="./src/assets/icons/group-trilhas.svg" class="logo-trilhas" alt="">
-        </div>
-
+        <section class="img-secundaria p-5">
+            <img src="./src/assets/img/trilhaslogo.svg" alt="Trilhas Inova">
+        </section>
+       
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="./modules/main.js"></script>
-
 </body>
-
 </html>
