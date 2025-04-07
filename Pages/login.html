@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login do usuário</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style_login.css">
+</head>
+
+<body>
+    <main class="main-principal">
+        <section class="section-principal "> 
+
+            <section class="img-principal p-9">
+                <img src="./img/Imagem.svg" alt="Imagem principal">
+            </section>
+
+            <section class="form bg-white rounded-lg p-10">
+               <div class="form-div">
+                <h1 class="mb-8 mt-12 text-4xl font-mono ">Login</h1>
+                <form class="w-[100%]" onsubmit="">
+                
+                 <div>
+                    <label for="entrada-1" class="block text-black-600 text-sm font-medium mb-2 text-xl" id="id-usuario">CPF</label>
+                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-100 focus:outline-nome focus:rin-2 focus:border-blue-500 mb-4"  id="entrada-1" maxlength="100"/>
+                 </div>
+
+                 <div>
+                    <label for="entrada-2" class="block text-black-600 text-sm font-medium mb-2 text-xl" id="id-senha">Senha</label>
+                    <input type="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-100 focus:outline-nome focus:rin-2 focus:border-blue-500 mb-8"  id="entrada-2" maxlength="100"/>
+                 </div>
+                   
+                 <div class="flex justify-center">
+                    <button type="submit" class="w-3/5 bg-[#E43A12] text-black text-xl font-bold py-3 px-4 border-2 border-gray-500 rounded-md hover:bg-gray-400">Entrar</button>
+                 </div>
+                
+                </form>
+                     <div class="footerTelaLogin">
+                    <a href="/index.html" class="mb-8">Cadastrar</a>
+                    <h3>Esqueci a senha</h3>
+                </div>
+               </div>
+        </section>
+        </section>
+
+        <section class="img-secundaria p-5">
+            <img src="./img/Trilhas _ Inova.svg" alt="Trilhas Inova">
+        </section>
+       
+    </main>
+</body>
+</html>
