@@ -93,24 +93,47 @@ function formatadorNumero() {
 
 function formatadorSenha() {
     let senha = document.getElementById("senha");
-    senha.addEventListener('input', function (e) {
+    let senhaConfirmada = document.getElementById("senha-confirmada");
 
-        const temMaiuscula = /[A-Z]/.test(valor);
-        const temNumero = /[0-9]/.test(valor);
-        const temEspecial = /[!@#$%^&*(),.?":{}|<>]/.test(valor);
+    let maiuscula = document.getElementById("maiuscula");
+    let caractere = document.getElementById("caractere-especial");
+    let numero = document.getElementById("numero");
+    let senhaIgual = document.getElementById("senha-igual");
+    let btn = document.getElementById("salvarSenha");
 
-        const maiuscula = document.getElementById("maiuscula");
-        const caractere = document.getElementById("caractere-especial");
-        const numero = document.getElementById("numero");
+    function validarSenha(valor) {
+        let temMaiuscula = /[A-Z]/.test(valor);
+        let temNumero = /[0-9]/.test(valor);
+        let temEspecial = /[!@#$%^&*(),.?":{}|<>]/.test(valor);
 
         maiuscula.style.color = temMaiuscula ? "green" : "red";
         caractere.style.color = temEspecial ? "green" : "red";
         numero.style.color = temNumero ? "green" : "red";
 
+        return temMaiuscula && temNumero && temEspecial;
+    }
 
+    function senhasIguais() {
+        const senhaValida = validarSenha(senha.value);
+        const iguais = senha.value === senhaConfirmada.value && senha.value.length > 0;
 
+        senhaIgual.style.color = iguais ? "green" : "red";
+        btn.disabled = !(iguais && senhaValida); // habilita o botão somente se tudo for válido
+    }
 
-    })
+    senha.addEventListener('input', senhasIguais);
+    senhaConfirmada.addEventListener('input', senhasIguais);
+
+    btn.addEventListener('click', (e) => {
+        e.preventDefault(); // evita envio se estiver em form
+
+        const dados = JSON.parse(localStorage.getItem('dadosInscricao')) || {};
+        dados.senha = senha.value;
+        localStorage.setItem('dadosInscricao', JSON.stringify(dados));
+
+        alert("Senha salva com sucesso!");
+        window.location.href = "../index.html"; // ajuste o caminho se necessário
+    });
 }
 
 export { formatadorCpf, formatadorEmail, formatadorTelefone, formatadorCep, formatadorNumero, formatadorSenha };
