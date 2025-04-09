@@ -111,21 +111,6 @@ function formatadorSenha() {
         numero.style.color = temNumero ? "green" : "red";
     }
 
-    
-    // function senhasIguais() {
-    //     if (senha.value === senhaConfirmada.value && senha.value.length > 0) {
-    //         senhaIgual.style.color = "green";
-    //         const dados = JSON.parse(localStorage.getItem('dadosInscricao')) || {};
-
-    //         localStorage.setItem('dadosInscricao', JSON.stringify(dados));
-    //         dados.senha = senha.value;
-
-    //         alert("Redirecionando...");
-    //         window.location.href = '../index.html';
-    //     } else {
-    //         senhaIgual.style.color = "red";
-    //     }
-    // }
     function senhasIguais() {
         if (senha.value === senhaConfirmada.value && senha.value.length > 0) {
             senhaIgual.style.color = "green";
