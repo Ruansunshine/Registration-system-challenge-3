@@ -138,7 +138,7 @@ function segurancaClick() {
                 }
             } else {
                 dados[nome] = campo.value.trim();
-            }
+            }''
         });
 
         // Salva no localStorage

@@ -10,13 +10,13 @@
 
 <body class="bg-gray-100 min-h-screen flex items-center justify-center">
   <main class="bg-white shadow-xl rounded-lg p-10 max-w-xl w-full">
-    <h1 class="text-3xl font-bold text-center mb-6 text-gray-800">👤 Dados do Candidato</h1>
+    <h1 class="text-3xl font-bold text-center mb-6 text-gray-800"> Dados do Candidato</h1>
     <div id="info-usuario" class="text-gray-700 text-lg"></div>
   </main>
 
   <script type="module">
     const dados = JSON.parse(localStorage.getItem('dadosInscricao'));
-    console.log("🧾 Dados recebidos via localStorage:", dados);
+    console.log("Dados recebidos via localStorage:", dados);
 
     const container = document.getElementById('info-usuario');
 
