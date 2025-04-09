@@ -1,4 +1,3 @@
-
 //Selecionar Arquivos
 
 function selecionarArquivo() { //Seleção de arquivos;
@@ -146,7 +145,7 @@ function segurancaClick() {
         console.log("Dados salvos no localStorage:", dados);
 
         // Redireciona para página final
-        window.location.href = '/teste.html';
+        window.location.href = '../pages/password.html';
     });
 
     cancelar.addEventListener('click', () => {
@@ -222,9 +221,30 @@ function validarCampoVazio() {
     }
 }
 
+function fazerLogin(){
+    document.getElementById('form-login').addEventListener('submit', function (event) {
+        event.preventDefault(); // evita recarregar a página
+    
+        const cpfInput = document.getElementById('entrada-1').value.trim();
+        const senhaInput = document.getElementById('entrada-2').value;
+    
+        const dados = JSON.parse(localStorage.getItem('dadosInscricao'));
+    
+        if (!dados) {
+            alert("❌ Nenhum dado encontrado. Faça o cadastro primeiro.");
+            return;
+        }
+    
+        if (dados.cpf === cpfInput && dados.senha === senhaInput) {
+            alert("✅ Login realizado com sucesso!");
+            window.location.href = './views.html'; // ajuste o caminho se necessário
+        } else {
+            alert("❌ CPF ou senha incorretos.");
+        }
+    });
+}
 
 
 
 
-
-export { selecionarArquivo, passarParametros, carregarEstados, trilhasCheck, segurancaClick, processarInscricao, validarCampoVazio };
+export { selecionarArquivo, passarParametros, carregarEstados, trilhasCheck, segurancaClick, processarInscricao, validarCampoVazio, fazerLogin };

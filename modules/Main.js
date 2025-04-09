@@ -1,6 +1,6 @@
-import { ManipulationDom } from "./DomLabels.js";
+import { ManipulationDom } from "./domLabels.js";
 import { selecionarArquivo, carregarEstados, trilhasCheck, segurancaClick, processarInscricao, passarParametros,  validarCampoVazio } from "./functions.js";
-import { formatadorCep, formatadorCpf, formatadorEmail, formatadorNumero, formatadorSenha, formatadorTelefone } from "./Formatters.js";
+import { formatadorCep, formatadorCpf, formatadorEmail, formatadorNumero, formatadorSenha, formatadorTelefone } from "./formatters.js";
 
 //Domlabels
 ManipulationDom();
@@ -19,22 +19,3 @@ formatadorEmail();
 formatadorTelefone();
 formatadorCep();
 formatadorNumero();
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
