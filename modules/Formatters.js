@@ -90,50 +90,53 @@ function formatadorNumero() {
     });
 }
 
-function formatadorSenha() {
-    let senha = document.getElementById("senha");
-    let senhaConfirmada = document.getElementById("senha-confirmada");
+// function formatadorSenha() {
+//     let senha = document.getElementById("senha");
+//     let senhaConfirmada = document.getElementById("senha-confirmada");
+//     //let salvaSenha = document.getElementById("salvarSenha");
 
 
-    let maiuscula = document.getElementById("maiuscula");
-    let caractere = document.getElementById("caractere-especial");
-    let numero = document.getElementById("numero");
-    let senhaIgual = document.getElementById("senha-igual");
+//     let maiuscula = document.getElementById("maiuscula");
+//     let caractere = document.getElementById("caractere-especial");
+//     let numero = document.getElementById("numero");
+//     let senhaIgual = document.getElementById("senha-igual");
 
-    function validarSenha(valor) {
+//     function validarSenha(valor) {
 
-        let temMaiuscula = /[A-Z]/.test(valor);
-        let temNumero = /[0-9]/.test(valor);
-        let temEspecial = /[!@#$%^&*(),.?":{}|<>]/.test(valor);
+//         let temMaiuscula = /[A-Z]/.test(valor);
+//         let temNumero = /[0-9]/.test(valor);
+//         let temEspecial = /[!@#$%^&*(),.?":{}|<>]/.test(valor);
 
-        maiuscula.style.color = temMaiuscula ? "green" : "red";
-        caractere.style.color = temEspecial ? "green" : "red";
-        numero.style.color = temNumero ? "green" : "red";
-    }
+//         maiuscula.style.color = temMaiuscula ? "green" : "red";
+//         caractere.style.color = temEspecial ? "green" : "red";
+//         numero.style.color = temNumero ? "green" : "red";
+//     }
 
     
-    function senhasIguais() {
-        if (senha.value === senhaConfirmada.value && senha.value.length > 0) {
-            senhaIgual.style.color = "green";
-            const dados = JSON.parse(localStorage.getItem('dadosInscricao')) || {};
+//     function senhasIguais() {
+//         if (senha.value === senhaConfirmada.value && senha.value.length > 0) {
+//             senhaIgual.style.color = "green";
+//             const dados = JSON.parse(localStorage.getItem('dadosInscricao')) || {};
 
-            localStorage.setItem('dadosInscricao', JSON.stringify(dados));
-            dados.senha = senha.value;
+//             //localStorage.setItem('dadosInscricao', JSON.stringify(dados));
+//             //dados.senha = senha.value;
 
-            alert("Redirecionando...");
-            window.location.href = '../index.html';
-        } else {
-            senhaIgual.style.color = "red";
-        }
-    }
-   senha.addEventListener('input', ()=> {
-    validarSenha(senha.value);
-    senhasIguais();
-   });
-   senhaConfirmada.addEventListener('input', ()=> {
-    senhasIguais();
-   });
+//         } else {
+//             senhaIgual.style.color = "red";
+//         }
+//     }
+//    senha.addEventListener('input', ()=> {
+//     validarSenha(senha.value);
+//     senhasIguais();
+//    });
+//    senhaConfirmada.addEventListener('input', ()=> {
+//     senhasIguais();
+//    });
+// salvarSenha.addEventListener('click', () {
 
-}
+// })
+
+// }
+
 
 export { formatadorCpf, formatadorEmail, formatadorTelefone, formatadorCep, formatadorNumero, formatadorSenha };
