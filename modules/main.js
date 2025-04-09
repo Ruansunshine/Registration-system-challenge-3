@@ -19,7 +19,7 @@ formatadorEmail();
 formatadorTelefone();
 formatadorCep();
 formatadorNumero();
-
+formatadorSenha();
     
 
 
