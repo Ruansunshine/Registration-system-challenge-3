@@ -23,9 +23,9 @@ function formatadorCpfLogin() {
     let cpfInput = document.getElementById('entrada-1');
     cpfInput.addEventListener("input", function (e) {
         let value = e.target.value;
-        // Remove caracteres não numéricos
+        
         value = value.replace(/\D/g, "");
-        // Formata o CPF corretamente
+        
         if (value.length <= 3) {
             value = value.replace(/(\d{3})(\d{0,3})/, "$1.$2");
         } else if (value.length <= 6) {
@@ -35,7 +35,7 @@ function formatadorCpfLogin() {
         } else if (value.length === 11) {
             value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
         }
-        // Atualiza o campo
+        
         e.target.value = value;
     });
 }

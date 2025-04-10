@@ -17,8 +17,6 @@ function ManipulationDom() {
   };
 
   Object.entries(labels).forEach(([id, text]) => {
-    // console.log(id);
-    // console.log(text);
     const element = document.getElementById(id);
     if (element) element.textContent = text;
   });
