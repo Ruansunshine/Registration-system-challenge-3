@@ -1,5 +1,5 @@
 
-import { formatadorSenha } from "./formatters.js";
+import { formatadorSenha } from "./Formatters.js";
 import { fazerLogin } from "./functions.js";
 
 
