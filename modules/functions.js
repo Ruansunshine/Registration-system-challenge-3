@@ -151,7 +151,7 @@ function segurancaClick() {
 
     cancelar.addEventListener('click', () => {
         console.log("Inscrição cancelada com sucesso");
-        window.location.href = './index.html';
+        window.location.href = '../index.html';
     });
 }
 
