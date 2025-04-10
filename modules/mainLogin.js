@@ -13,7 +13,7 @@ function fazerLogin(event) {
     const senha = document.getElementById('entrada-2').value;
 
     if (cpf === dados.CPF && senha === dados.senha) {
-        window.location.href = "./Pages/views.html";
+        window.location.href = "../Pages/views.html";
     } else {
         alert("CPF ou senha inválidos");
     }
