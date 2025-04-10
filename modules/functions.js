@@ -147,11 +147,12 @@ function segurancaClick() {
 
         // Redireciona para página final
         window.location.href = '../pages/password.html';
+
     });
 
     cancelar.addEventListener('click', () => {
         console.log("Inscrição cancelada com sucesso");
-        window.location.href = '../index.html';
+        window.location.href = '../pages/cadastro.html';
     });
 }
 
